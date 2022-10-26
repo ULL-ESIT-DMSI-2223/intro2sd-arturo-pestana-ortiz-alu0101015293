@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+# Comando para correr servidor en local-> bundle exec jekyll serve --watch --incremental --future  -P 4001
+
 gem "github-pages", group: :jekyll_plugins
 
 gem "tzinfo-data"
