@@ -1,0 +1,9 @@
+{
+    "titulo": "The Walking Dead",
+    "temporada": 1,
+    "colores": {
+        "alumnos": ["guillermo", "jorge", "patricia"],
+        "color": ["rojo", "verde", "azul"],
+        "texto": "Seleccion de Colores"
+    }
+}
