@@ -13,7 +13,7 @@ minimal_mistakes_skin    : "dark" # "default" "air", "aqua", "contrast", "dark",
 locale                   : "en-US"
 title                    : "Introducción al Desarrollo de Sistemas"
 title_separator          : "-"
-subtitle                 : "Una página hecha por Arturo"
+subtitle                 : "A web made by Arturo Pestana"
 name                     : &name "Arturo Pestana" # &name is a YAML anchor which can be *referenced later
 description              : &description "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."
 url                      : https://mmistakes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -70,23 +70,6 @@ naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
 
-# Social Sharing
-twitter:
-  username               : &twitter "mmistakes"
-facebook:
-  username               : &facebook "michaelrose"
-  app_id                 :
-  publisher              :
-og_image                 : "/assets/images/site-logo.png" # Open Graph/Twitter default site image
-# For specifying social profiles, used in _includes/seo.html
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-    - "https://twitter.com/mmistakes"
-    - "https://www.facebook.com/michaelrose"
-
 # Analytics
 analytics:
   provider               : "google-universal" # false (default), "google", "google-universal", "google-gtag", "custom"
@@ -98,9 +81,9 @@ analytics:
 # Site Author
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
-  avatar           : "/assets/images/michael-rose.jpg"
-  bio              : "Un estudiante cursando la asignatura de DMSI"
-  location         : "Islas Canarias"
+  avatar           : "/assets/images/arturo.jpeg"
+  bio              : "A student taking the DMSI subject"
+  location         : "Canary Island"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
