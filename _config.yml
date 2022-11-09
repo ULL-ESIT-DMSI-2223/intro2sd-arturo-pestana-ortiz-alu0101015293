@@ -7,14 +7,14 @@
 
 remote_theme             : "mmistakes/minimal-mistakes@4.24.0"
 
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "dark" # "default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 title                    : "Introducción al Desarrollo de Sistemas"
 title_separator          : "-"
-subtitle                 : "A Jekyll theme"
-name                     : &name "Michael Rose" # &name is a YAML anchor which can be *referenced later
+subtitle                 : "Una página hecha por Arturo"
+name                     : &name "Arturo Pestana" # &name is a YAML anchor which can be *referenced later
 description              : &description "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."
 url                      : https://mmistakes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/intro2sd-template/" # the subpath of your site, e.g. "/blog"
@@ -99,35 +99,20 @@ analytics:
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
   avatar           : "/assets/images/michael-rose.jpg"
-  bio              : "A Student"
+  bio              : "Un estudiante cursando la asignatura de DMSI"
   location         : "Islas Canarias"
   links:
-    - label: "Made Mistakes"
-      icon: "fas fa-fw fa-link"
-      url: "https://mademistakes.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/mmistakes"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/mmistakes"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/mmistakes"
+      url: "https://github.com/alu0101015293"
 
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/mmistakes"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/mmistakes"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/mmistakes"
+      url: "https://github.com/alu0101015293"
 
 
 # Reading Files
@@ -197,9 +182,6 @@ collections:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
-    permalink: /:collection/:path/
-  tareas:
     output: true
     permalink: /:collection/:path/
 
