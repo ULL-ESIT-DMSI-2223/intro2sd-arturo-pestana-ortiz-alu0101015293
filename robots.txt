@@ -1,1 +1,1 @@
-Sitemap: https://mmistakes.github.io/intro2sd-arturo-pestana-ortiz-alu0101015293/sitemap.xml
+Sitemap: http://localhost:4001/intro2sd-template/sitemap.xml
