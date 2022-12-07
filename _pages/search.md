@@ -31,6 +31,10 @@ title: Search
 
 <noscript>Please enable JavaScript to use the search form.</noscript>
 
+fetchedData() {
+    return fetch(this.dataource, {mode: 'no-cors'})
+    .then(blob => blob.json())
+} ## esto dehe de ir en el search.js
 
 {% endCapture %}
 
