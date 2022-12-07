@@ -9,7 +9,7 @@ title: Search
 <h1>Search</h1>
 
 <form id="search-for" action="">
-    <label class="label" for="search">Search term (accepts a regex):</label>
+    <label class="label" for="search">Buscador (acepta expresiones regulares):</label>
     </br>
     <input class="input" id="search" type="text" name="search" autofocus placeholder="Ejemplo" autocomplete="off">
 
