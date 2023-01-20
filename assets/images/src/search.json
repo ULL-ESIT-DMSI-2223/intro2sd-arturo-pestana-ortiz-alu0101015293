@@ -17,9 +17,9 @@ sitemap: false
       },
     {% endfor %}
   {% endfor %}
-  
-  {% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.title != null' %}
 
+  {% assign pages = site.html_pages | where_exp:'doc','doc.sitemap != false' | where_exp:'doc','doc.title != null' %}
+  
   {% for page in pages %}
   {
     "title": {{ page.title | jsonify }},
