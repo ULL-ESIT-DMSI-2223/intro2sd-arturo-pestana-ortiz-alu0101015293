@@ -43,7 +43,6 @@ class JekyllSearch {
       } 
     }
   
-    // https://stackoverflow.com/questions/43431550/async-await-class-constructor
     init() {
       
       const url = new URL(document.location)
