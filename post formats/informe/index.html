@@ -1,0 +1,976 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Informe práctica - Introducción al Desarrollo de Sistemas</title>
+<meta name="description" content="Informe práctica Introduction to Systems Development     Modificando _config.yml y sus valores de default  Editando el archivo _config.yml cambiamos la mayoría de los valores de Jeykill. En esta práctica se ha modificado lo siguiente:     minimal_mistakes_skin: Se cambio de default a dark.   locale: Se cambio el parámetro a es-ES.   title: Se cambio el título a Introducción al Desarrollo de Sistemas.   subtitle: Se cambió el subtítulo a A web made by Arturo Pestana.   name: Cambiamos el name a Arturo para que el nombre del autor sea el nuestro, esto lo hacemos debido a que el namepuede ser referenciado en distintos sitios de nuestra web.   description: Es otro objeto al que se le puede referenciar desde otros sitios de la web, lo cambiamos.   baseurl: Se modifica para que tenga la url de la página web.   author: Este objeto se usa para referenciar al autor de la página, por lo tanto se modificaron varios parámetros.            name: Es una referencia al name anteriormente mencionado.       avatar: Lo modificamos y ponemos la ruta de nuestra foto.       bio: Lo modificamos para que tenga una descripción del autor.       location: Lo modificamos por Canary Island.       links: Este es un array de referencias, contiene las urls de las redes sociales, eliminamos el de Twitter e Instagram y solo modificamos el de Github, añadiendo el enlace a nuestro perfil.           footer: Es el objeto que referencia al pie de página. Conrtiene lo mismo que el array links por lo que procedemos a hacer los mismos cambios mencionados anteriormente.   Se modificaron varios parámetros de la sección de defaults. En este objeto se especifican reglas generales que se aplicarán a cierto grupo de páginas, donde camben destacar los posts o los docs.  Desplegando el sitio web en Github usando Jeykill  Para desplegar una página con gh-pages usamos npx gh-pages -d _site, npx es un ejecutor de paquetes basados en Node.js.  Gh-pages es un paquete que contiene un módulo de despliegue automático que realiza las tareas necesarias para el despliegue de la página web de nuestro repositorio en los servidores de github con gh-pages. Crea automáticamente una rama en nuestro repositorio llamada gh-pages donde situa los archivos necesarios para el despliegue de la página.  Creación de una Collection en Jeykill  En el archivo _config.yml, se define nuestra collection como demostraremos ahora:  # Collections collections:   docs:     output: true     permalink: /:collection/:path/   recipes:     output: true     permalink: /:collection/:path/   pets:     output: true     permalink: /:collection/:path/   portfolio:     output: true     permalink: /:collection/:path/   publicaciones:     output: true     permalink: /:collection/:path/  Como vemos tenemos una collection llamada publicaciones, con output: true para que jeykill cree una página para cada uno de las collections dentro de la web. Una vez realizado esto crearemos un archivo en _pages llamado publicaciones.md donde solo pondremos un mensaje diciendo que se hace uso de las collections y enseñando todas las publicaciones con liquid, donde podemos ver que ya se hace uso de liquid en nuestra web. --- title: Publicaciones     layout: collection permalink: /publicaciones/ collection: publicaciones entries_layout: grid classes: wide ---  Sample document listing for the collection `_publicaciones`.  Imprime todas las publicaciones que hemos hecho:   - Post: Future Date  - Resumen tema 2 Developing Information Systems  - Informe práctica: implementación del search  - Informe práctica  - Informe práctica  - Exclude Post from Search Index  - Layout: Header Video  - Gemified Theme -- Beta Release  - Gemified Theme -- Alpha Release  - Welcome to Jekyll!  - Markup: Syntax Highlighting  - Markup: Another Post with Images  - Markup: HTML Tags and Formatting  - Markup: Image Alignment  - Markup: Text Alignment  - Markup: Title with Special&amp;nbsp;---&amp;nbsp;Characters  - Markup: Title *with* **Markdown**  - Markup: Text Readability Test  - Wide Single Layout Page  - Layout: Sidebar with Navigation List  - Layout: Sidebar Custom  - Layout: More Tag  - Layout: Header Image Overlay  - Layout: Header Image Overlay with Custom Tagline  - Layout: Header Overlay with Background Fill  - Layout: Header Image (Vertical)  - Layout: Header Image and Text Readability  - Layout: Header Image (Horizontal)  - Layout: Header Image (External URL)  - Layout: Author Sidebar Disabled  - Layout: Author Override  - Layout: Excerpt (Generated)  - Layout: Excerpt (Defined)  - Layout: Code Excerpt (Generated)  - Layout: Post with Sticky Table of Contents  - Layout: Post with Table of Contents  - Layout: Post with Nested Table of Contents  - Layout: Post with Nested Table of Contents via Helper  - Layout: Reading Time, Comments, Social Sharing Links, and Related Posts Disabled  - Layout: Social Sharing Links Enabled  - Layout: Social Sharing Links Disabled  - Layout: Related Posts Enabled  - Layout: Related Posts Disabled  - Layout: Read Time Enabled  - Layout: Read Time Disabled  - Layout: Post Date Enabled  - Layout: Post Date Disabled  - Layout: Comments Enabled  - Layout: Comments Disabled  - Post: Twitter Embed  - Post: Gallery  - Post: Image (Caption)  - Post: Image (Linked with Caption)  - Post: Teaser Image with OpenGraph Override  - Post: Image (Standard)  - Post: Image (with Link)  - Post: Overlay Image with OpenGraph Override  - Post: Header Image with OpenGraph Override  - Post: Video (YouTube)  - Post: Link  - Post: Quote  - Post: Notice  - Post: Chat  - Post: Standard  - Post: Modified Date  - Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive &#39;been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid  - Antidisestablishmentarianism  - Edge Case: Post with multiline excerpt  - Edge Case No Yaml Title  - Edge Case: No Body Content  - Edge Case: Many Categories  - Edge Case: Many Tags  - Edge Case: Nested and Mixed Lists   Finalmente, en el archivo navigation.yml creamos en main un enlace para acceder a la página de publicaciones.md desde la barra superior de nuestra web. main:   - title: &quot;Quick-Start Guide&quot;     url: /docs/quick-start-guide/   - title: &quot;About&quot;     url: /about/   - title: &quot;Sample Posts&quot;     url: /year-archive/   - title: &quot;Sample Collections&quot;     url: /collection-archive/   - title: &quot;Terms &amp;amp; Privacy Policy&quot;     url: /terms/   - title: &quot;Publicaciones&quot;     url: /publicaciones/  404 Error Not Found  Modificamos el fichero 404.md donde detallaremos los parametros que usará Jekyll para la creación de la página 404. Primero escribimos el mensaje que aparecerá en pantalla. Una vez hecho esto vamos a usar un servicio web para mostrar imágenes aleatorias de gatos y también citas famosas con su autor. La llamada a la API se hará de la siguiente forma: &lt;script type=&quot;text/javascript&quot;&gt;  /*   https://docs.thecatapi.com/  */ const URL = &#39;https://api.thecatapi.com/v1/images/search?size=full&#39;;  (async function() {   try {          // CAT      let divTitle = document.getElementById(&quot;comment-cat&quot;);          let divcat = document.getElementById(&quot;cat&quot;);     let response = await fetch(URL, {        headers: {        &#39;x-api-key&#39;: &quot;56a4f1cc-7f60-468d-9dba-e4b6f04b7c7d&quot;        }     });     let cat = await response.json();     // console.log(cat);        let img = document.createElement(&quot;img&quot;);     let title = document.createElement(&quot;h2&quot;);     title.innerText = &quot;Consuélate con unos gatos ;)&quot;;        divTitle.append(title);     img.src = cat[0].url;     divcat.appendChild(img);         // QUOTE     const quoteDiv = document.getElementById(&quot;quote&quot;);     const authorDiv = document.getElementById(&quot;author&quot;);          const quoteRes = await fetch(&#39;https://api.quotable.io/random&#39;);     const data = await quoteRes.json();     quoteDiv.innerHTML = `&lt;h2&gt;${data.content}&lt;/h2&gt;`;     authorDiv.innerHTML = `&lt;h3&gt;—${data.author}&lt;/h3&gt;`;   }   catch(e) {      console.log(e);   } })(); &lt;/script&gt;   Si probamos a buscar una página que no existe, ahora nos saldrá esto:    Desplegando la web con Netlify  Para realizar el despliegue con Netlify primero creamos una cuenta asociándola con Github. Luego seleccionamos el repositorio que vamos a utilizar y lo hacemos público porque desplegar repositorios privados es solo mediante pago. Una vez hecho esto nos quedaría ajustar ciertos parámetros para poder desplegar en netlify. En el fichero _config.dev.yml que es el fichero de sobrecarga de objetos, tenemos que poner baseurl: &quot;&quot;.   Una vez hecho los cambios tenemos que ir a netlify y tendremos que cambiar el comando de despliegue de npm run build jekyll build --config _config.yml,_config.dev.yml para que se use la configuración del fichero _config.yml. Si esto no se hace la página se desplegará mal.">
+
+
+  <meta name="author" content="Arturo Pestana">
+  
+  <meta property="article:author" content="Arturo Pestana">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Introducción al Desarrollo de Sistemas">
+<meta property="og:title" content="Informe práctica">
+<meta property="og:url" content="https://mmistakes.github.io/intro2sd-template/post%20formats/informe/">
+
+
+  <meta property="og:description" content="Informe práctica Introduction to Systems Development     Modificando _config.yml y sus valores de default  Editando el archivo _config.yml cambiamos la mayoría de los valores de Jeykill. En esta práctica se ha modificado lo siguiente:     minimal_mistakes_skin: Se cambio de default a dark.   locale: Se cambio el parámetro a es-ES.   title: Se cambio el título a Introducción al Desarrollo de Sistemas.   subtitle: Se cambió el subtítulo a A web made by Arturo Pestana.   name: Cambiamos el name a Arturo para que el nombre del autor sea el nuestro, esto lo hacemos debido a que el namepuede ser referenciado en distintos sitios de nuestra web.   description: Es otro objeto al que se le puede referenciar desde otros sitios de la web, lo cambiamos.   baseurl: Se modifica para que tenga la url de la página web.   author: Este objeto se usa para referenciar al autor de la página, por lo tanto se modificaron varios parámetros.            name: Es una referencia al name anteriormente mencionado.       avatar: Lo modificamos y ponemos la ruta de nuestra foto.       bio: Lo modificamos para que tenga una descripción del autor.       location: Lo modificamos por Canary Island.       links: Este es un array de referencias, contiene las urls de las redes sociales, eliminamos el de Twitter e Instagram y solo modificamos el de Github, añadiendo el enlace a nuestro perfil.           footer: Es el objeto que referencia al pie de página. Conrtiene lo mismo que el array links por lo que procedemos a hacer los mismos cambios mencionados anteriormente.   Se modificaron varios parámetros de la sección de defaults. En este objeto se especifican reglas generales que se aplicarán a cierto grupo de páginas, donde camben destacar los posts o los docs.  Desplegando el sitio web en Github usando Jeykill  Para desplegar una página con gh-pages usamos npx gh-pages -d _site, npx es un ejecutor de paquetes basados en Node.js.  Gh-pages es un paquete que contiene un módulo de despliegue automático que realiza las tareas necesarias para el despliegue de la página web de nuestro repositorio en los servidores de github con gh-pages. Crea automáticamente una rama en nuestro repositorio llamada gh-pages donde situa los archivos necesarios para el despliegue de la página.  Creación de una Collection en Jeykill  En el archivo _config.yml, se define nuestra collection como demostraremos ahora:  # Collections collections:   docs:     output: true     permalink: /:collection/:path/   recipes:     output: true     permalink: /:collection/:path/   pets:     output: true     permalink: /:collection/:path/   portfolio:     output: true     permalink: /:collection/:path/   publicaciones:     output: true     permalink: /:collection/:path/  Como vemos tenemos una collection llamada publicaciones, con output: true para que jeykill cree una página para cada uno de las collections dentro de la web. Una vez realizado esto crearemos un archivo en _pages llamado publicaciones.md donde solo pondremos un mensaje diciendo que se hace uso de las collections y enseñando todas las publicaciones con liquid, donde podemos ver que ya se hace uso de liquid en nuestra web. --- title: Publicaciones     layout: collection permalink: /publicaciones/ collection: publicaciones entries_layout: grid classes: wide ---  Sample document listing for the collection `_publicaciones`.  Imprime todas las publicaciones que hemos hecho:   - Post: Future Date  - Resumen tema 2 Developing Information Systems  - Informe práctica: implementación del search  - Informe práctica  - Informe práctica  - Exclude Post from Search Index  - Layout: Header Video  - Gemified Theme -- Beta Release  - Gemified Theme -- Alpha Release  - Welcome to Jekyll!  - Markup: Syntax Highlighting  - Markup: Another Post with Images  - Markup: HTML Tags and Formatting  - Markup: Image Alignment  - Markup: Text Alignment  - Markup: Title with Special&amp;nbsp;---&amp;nbsp;Characters  - Markup: Title *with* **Markdown**  - Markup: Text Readability Test  - Wide Single Layout Page  - Layout: Sidebar with Navigation List  - Layout: Sidebar Custom  - Layout: More Tag  - Layout: Header Image Overlay  - Layout: Header Image Overlay with Custom Tagline  - Layout: Header Overlay with Background Fill  - Layout: Header Image (Vertical)  - Layout: Header Image and Text Readability  - Layout: Header Image (Horizontal)  - Layout: Header Image (External URL)  - Layout: Author Sidebar Disabled  - Layout: Author Override  - Layout: Excerpt (Generated)  - Layout: Excerpt (Defined)  - Layout: Code Excerpt (Generated)  - Layout: Post with Sticky Table of Contents  - Layout: Post with Table of Contents  - Layout: Post with Nested Table of Contents  - Layout: Post with Nested Table of Contents via Helper  - Layout: Reading Time, Comments, Social Sharing Links, and Related Posts Disabled  - Layout: Social Sharing Links Enabled  - Layout: Social Sharing Links Disabled  - Layout: Related Posts Enabled  - Layout: Related Posts Disabled  - Layout: Read Time Enabled  - Layout: Read Time Disabled  - Layout: Post Date Enabled  - Layout: Post Date Disabled  - Layout: Comments Enabled  - Layout: Comments Disabled  - Post: Twitter Embed  - Post: Gallery  - Post: Image (Caption)  - Post: Image (Linked with Caption)  - Post: Teaser Image with OpenGraph Override  - Post: Image (Standard)  - Post: Image (with Link)  - Post: Overlay Image with OpenGraph Override  - Post: Header Image with OpenGraph Override  - Post: Video (YouTube)  - Post: Link  - Post: Quote  - Post: Notice  - Post: Chat  - Post: Standard  - Post: Modified Date  - Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive &#39;been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid  - Antidisestablishmentarianism  - Edge Case: Post with multiline excerpt  - Edge Case No Yaml Title  - Edge Case: No Body Content  - Edge Case: Many Categories  - Edge Case: Many Tags  - Edge Case: Nested and Mixed Lists   Finalmente, en el archivo navigation.yml creamos en main un enlace para acceder a la página de publicaciones.md desde la barra superior de nuestra web. main:   - title: &quot;Quick-Start Guide&quot;     url: /docs/quick-start-guide/   - title: &quot;About&quot;     url: /about/   - title: &quot;Sample Posts&quot;     url: /year-archive/   - title: &quot;Sample Collections&quot;     url: /collection-archive/   - title: &quot;Terms &amp;amp; Privacy Policy&quot;     url: /terms/   - title: &quot;Publicaciones&quot;     url: /publicaciones/  404 Error Not Found  Modificamos el fichero 404.md donde detallaremos los parametros que usará Jekyll para la creación de la página 404. Primero escribimos el mensaje que aparecerá en pantalla. Una vez hecho esto vamos a usar un servicio web para mostrar imágenes aleatorias de gatos y también citas famosas con su autor. La llamada a la API se hará de la siguiente forma: &lt;script type=&quot;text/javascript&quot;&gt;  /*   https://docs.thecatapi.com/  */ const URL = &#39;https://api.thecatapi.com/v1/images/search?size=full&#39;;  (async function() {   try {          // CAT      let divTitle = document.getElementById(&quot;comment-cat&quot;);          let divcat = document.getElementById(&quot;cat&quot;);     let response = await fetch(URL, {        headers: {        &#39;x-api-key&#39;: &quot;56a4f1cc-7f60-468d-9dba-e4b6f04b7c7d&quot;        }     });     let cat = await response.json();     // console.log(cat);        let img = document.createElement(&quot;img&quot;);     let title = document.createElement(&quot;h2&quot;);     title.innerText = &quot;Consuélate con unos gatos ;)&quot;;        divTitle.append(title);     img.src = cat[0].url;     divcat.appendChild(img);         // QUOTE     const quoteDiv = document.getElementById(&quot;quote&quot;);     const authorDiv = document.getElementById(&quot;author&quot;);          const quoteRes = await fetch(&#39;https://api.quotable.io/random&#39;);     const data = await quoteRes.json();     quoteDiv.innerHTML = `&lt;h2&gt;${data.content}&lt;/h2&gt;`;     authorDiv.innerHTML = `&lt;h3&gt;—${data.author}&lt;/h3&gt;`;   }   catch(e) {      console.log(e);   } })(); &lt;/script&gt;   Si probamos a buscar una página que no existe, ahora nos saldrá esto:    Desplegando la web con Netlify  Para realizar el despliegue con Netlify primero creamos una cuenta asociándola con Github. Luego seleccionamos el repositorio que vamos a utilizar y lo hacemos público porque desplegar repositorios privados es solo mediante pago. Una vez hecho esto nos quedaría ajustar ciertos parámetros para poder desplegar en netlify. En el fichero _config.dev.yml que es el fichero de sobrecarga de objetos, tenemos que poner baseurl: &quot;&quot;.   Una vez hecho los cambios tenemos que ir a netlify y tendremos que cambiar el comando de despliegue de npm run build jekyll build --config _config.yml,_config.dev.yml para que se use la configuración del fichero _config.yml. Si esto no se hace la página se desplegará mal.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-11-01T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://mmistakes.github.io/intro2sd-template/post%20formats/informe/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Arturo Pestana",
+      "url": "https://mmistakes.github.io/intro2sd-template/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/intro2sd-template/feed.xml" type="application/atom+xml" rel="alternate" title="Introducción al Desarrollo de Sistemas Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/intro2sd-template/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/intro2sd-template/">
+          Introducción al Desarrollo de Sistemas
+          <span class="site-subtitle">A web made by Arturo Pestana</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/intro2sd-template/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/year-archive/">Sample Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/collection-archive/">Sample Collections</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/terms/">Terms &amp; Privacy Policy</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/publicaciones/">Publicaciones</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/intro2sd-template/assets/images/arturo.jpeg" alt="Arturo Pestana" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Arturo Pestana</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>A student taking the DMSI subject</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Canary Island</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/alu0101015293" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Informe práctica">
+    <meta itemprop="description" content="  Informe práctica Introduction to Systems Development Modificando _config.yml y sus valores de defaultEditando el archivo _config.yml cambiamos la mayoría de los valores de Jeykill. En esta práctica se ha modificado lo siguiente:  minimal_mistakes_skin: Se cambio de default a dark.  locale: Se cambio el parámetro a es-ES.  title: Se cambio el título a Introducción al Desarrollo de Sistemas.  subtitle: Se cambió el subtítulo a A web made by Arturo Pestana.  name: Cambiamos el name a Arturo para que el nombre del autor sea el nuestro, esto lo hacemos debido a que el namepuede ser referenciado en distintos sitios de nuestra web.  description: Es otro objeto al que se le puede referenciar desde otros sitios de la web, lo cambiamos.  baseurl: Se modifica para que tenga la url de la página web.  author: Este objeto se usa para referenciar al autor de la página, por lo tanto se modificaron varios parámetros.          name: Es una referencia al name anteriormente mencionado.      avatar: Lo modificamos y ponemos la ruta de nuestra foto.      bio: Lo modificamos para que tenga una descripción del autor.      location: Lo modificamos por Canary Island.      links: Este es un array de referencias, contiene las urls de las redes sociales, eliminamos el de Twitter e Instagram y solo modificamos el de Github, añadiendo el enlace a nuestro perfil.        footer: Es el objeto que referencia al pie de página. Conrtiene lo mismo que el array links por lo que procedemos a hacer los mismos cambios mencionados anteriormente.Se modificaron varios parámetros de la sección de defaults. En este objeto se especifican reglas generales que se aplicarán a cierto grupo de páginas, donde camben destacar los posts o los docs.Desplegando el sitio web en Github usando JeykillPara desplegar una página con gh-pages usamos npx gh-pages -d _site, npx es un ejecutor de paquetes basados en Node.js.Gh-pages es un paquete que contiene un módulo de despliegue automático que realiza las tareas necesarias para el despliegue de la página web de nuestro repositorio en los servidores de github con gh-pages. Crea automáticamente una rama en nuestro repositorio llamada gh-pages donde situa los archivos necesarios para el despliegue de la página.Creación de una Collection en JeykillEn el archivo _config.yml, se define nuestra collection como demostraremos ahora:# Collectionscollections:  docs:    output: true    permalink: /:collection/:path/  recipes:    output: true    permalink: /:collection/:path/  pets:    output: true    permalink: /:collection/:path/  portfolio:    output: true    permalink: /:collection/:path/  publicaciones:    output: true    permalink: /:collection/:path/Como vemos tenemos una collection llamada publicaciones, con output: true para que jeykill cree una página para cada uno de las collections dentro de la web. Una vez realizado esto crearemos un archivo en _pages llamado publicaciones.md donde solo pondremos un mensaje diciendo que se hace uso de las collections y enseñando todas las publicaciones con liquid, donde podemos ver que ya se hace uso de liquid en nuestra web.---title: Publicaciones    layout: collectionpermalink: /publicaciones/collection: publicacionesentries_layout: gridclasses: wide---Sample document listing for the collection `_publicaciones`.Imprime todas las publicaciones que hemos hecho:- Post: Future Date- Resumen tema 2 Developing Information Systems- Informe práctica: implementación del search- Informe práctica- Informe práctica- Exclude Post from Search Index- Layout: Header Video- Gemified Theme -- Beta Release- Gemified Theme -- Alpha Release- Welcome to Jekyll!- Markup: Syntax Highlighting- Markup: Another Post with Images- Markup: HTML Tags and Formatting- Markup: Image Alignment- Markup: Text Alignment- Markup: Title with Special&amp;nbsp;---&amp;nbsp;Characters- Markup: Title *with* **Markdown**- Markup: Text Readability Test- Wide Single Layout Page- Layout: Sidebar with Navigation List- Layout: Sidebar Custom- Layout: More Tag- Layout: Header Image Overlay- Layout: Header Image Overlay with Custom Tagline- Layout: Header Overlay with Background Fill- Layout: Header Image (Vertical)- Layout: Header Image and Text Readability- Layout: Header Image (Horizontal)- Layout: Header Image (External URL)- Layout: Author Sidebar Disabled- Layout: Author Override- Layout: Excerpt (Generated)- Layout: Excerpt (Defined)- Layout: Code Excerpt (Generated)- Layout: Post with Sticky Table of Contents- Layout: Post with Table of Contents- Layout: Post with Nested Table of Contents- Layout: Post with Nested Table of Contents via Helper- Layout: Reading Time, Comments, Social Sharing Links, and Related Posts Disabled- Layout: Social Sharing Links Enabled- Layout: Social Sharing Links Disabled- Layout: Related Posts Enabled- Layout: Related Posts Disabled- Layout: Read Time Enabled- Layout: Read Time Disabled- Layout: Post Date Enabled- Layout: Post Date Disabled- Layout: Comments Enabled- Layout: Comments Disabled- Post: Twitter Embed- Post: Gallery- Post: Image (Caption)- Post: Image (Linked with Caption)- Post: Teaser Image with OpenGraph Override- Post: Image (Standard)- Post: Image (with Link)- Post: Overlay Image with OpenGraph Override- Post: Header Image with OpenGraph Override- Post: Video (YouTube)- Post: Link- Post: Quote- Post: Notice- Post: Chat- Post: Standard- Post: Modified Date- Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive &#39;been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid- Antidisestablishmentarianism- Edge Case: Post with multiline excerpt- Edge Case No Yaml Title- Edge Case: No Body Content- Edge Case: Many Categories- Edge Case: Many Tags- Edge Case: Nested and Mixed ListsFinalmente, en el archivo navigation.yml creamos en main un enlace para acceder a la página de publicaciones.md desde la barra superior de nuestra web.main:  - title: &quot;Quick-Start Guide&quot;    url: /docs/quick-start-guide/  - title: &quot;About&quot;    url: /about/  - title: &quot;Sample Posts&quot;    url: /year-archive/  - title: &quot;Sample Collections&quot;    url: /collection-archive/  - title: &quot;Terms &amp;amp; Privacy Policy&quot;    url: /terms/  - title: &quot;Publicaciones&quot;    url: /publicaciones/404 Error Not FoundModificamos el fichero 404.md donde detallaremos los parametros que usará Jekyll para la creación de la página 404. Primero escribimos el mensaje que aparecerá en pantalla. Una vez hecho esto vamos a usar un servicio web para mostrar imágenes aleatorias de gatos y también citas famosas con su autor. La llamada a la API se hará de la siguiente forma:&lt;script type=&quot;text/javascript&quot;&gt;/*  https://docs.thecatapi.com/ */const URL = &#39;https://api.thecatapi.com/v1/images/search?size=full&#39;;(async function() {  try {        // CAT     let divTitle = document.getElementById(&quot;comment-cat&quot;);        let divcat = document.getElementById(&quot;cat&quot;);    let response = await fetch(URL, {       headers: {       &#39;x-api-key&#39;: &quot;56a4f1cc-7f60-468d-9dba-e4b6f04b7c7d&quot;       }    });    let cat = await response.json();    // console.log(cat);       let img = document.createElement(&quot;img&quot;);    let title = document.createElement(&quot;h2&quot;);    title.innerText = &quot;Consuélate con unos gatos ;)&quot;;       divTitle.append(title);    img.src = cat[0].url;    divcat.appendChild(img);       // QUOTE    const quoteDiv = document.getElementById(&quot;quote&quot;);    const authorDiv = document.getElementById(&quot;author&quot;);        const quoteRes = await fetch(&#39;https://api.quotable.io/random&#39;);    const data = await quoteRes.json();    quoteDiv.innerHTML = `&lt;h2&gt;${data.content}&lt;/h2&gt;`;    authorDiv.innerHTML = `&lt;h3&gt;—${data.author}&lt;/h3&gt;`;  }  catch(e) {     console.log(e);  }})();&lt;/script&gt;Si probamos a buscar una página que no existe, ahora nos saldrá esto:Desplegando la web con NetlifyPara realizar el despliegue con Netlify primero creamos una cuenta asociándola con Github. Luego seleccionamos el repositorio que vamos a utilizar y lo hacemos público porque desplegar repositorios privados es solo mediante pago. Una vez hecho esto nos quedaría ajustar ciertos parámetros para poder desplegar en netlify. En el fichero _config.dev.yml que es el fichero de sobrecarga de objetos, tenemos que poner baseurl: &quot;&quot;. Una vez hecho los cambios tenemos que ir a netlify y tendremos que cambiar el comando de despliegue de npm run build jekyll build --config _config.yml,_config.dev.yml para que se use la configuración del fichero _config.yml. Si esto no se hace la página se desplegará mal.">
+    <meta itemprop="datePublished" content="2022-11-01T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Informe práctica
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><br /></p>
+<p align="center">
+
+  <h1 align="center">Informe práctica Introduction to Systems Development </h1>
+
+</p>
+
+<h2 id="modificando-_configyml-y-sus-valores-de-default">Modificando _config.yml y sus valores de default</h2>
+
+<p>Editando el archivo <code class="language-plaintext highlighter-rouge">_config.yml</code> cambiamos la mayoría de los valores de Jeykill. En esta práctica se ha modificado lo siguiente:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">minimal_mistakes_skin</code>: Se cambio de default a dark.</li>
+  <li><code class="language-plaintext highlighter-rouge">locale</code>: Se cambio el parámetro a es-ES.</li>
+  <li><code class="language-plaintext highlighter-rouge">title</code>: Se cambio el título a <em>Introducción al Desarrollo de Sistemas</em>.</li>
+  <li><code class="language-plaintext highlighter-rouge">subtitle</code>: Se cambió el subtítulo a <em>A web made by Arturo Pestana</em>.</li>
+  <li><code class="language-plaintext highlighter-rouge">name</code>: Cambiamos el name a <em>Arturo</em> para que el nombre del autor sea el nuestro, esto lo hacemos debido a que el <code class="language-plaintext highlighter-rouge">name</code>puede ser referenciado en distintos sitios de nuestra web.</li>
+  <li><code class="language-plaintext highlighter-rouge">description</code>: Es otro objeto al que se le puede referenciar desde otros sitios de la web, lo cambiamos.</li>
+  <li><code class="language-plaintext highlighter-rouge">baseurl</code>: Se modifica para que tenga la url de la página web.</li>
+  <li><code class="language-plaintext highlighter-rouge">author</code>: Este objeto se usa para referenciar al autor de la página, por lo tanto se modificaron varios parámetros.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">name</code>: Es una referencia al <code class="language-plaintext highlighter-rouge">name</code> anteriormente mencionado.</li>
+      <li><code class="language-plaintext highlighter-rouge">avatar</code>: Lo modificamos y ponemos la ruta de nuestra foto.</li>
+      <li><code class="language-plaintext highlighter-rouge">bio</code>: Lo modificamos para que tenga una descripción del autor.</li>
+      <li><code class="language-plaintext highlighter-rouge">location</code>: Lo modificamos por <em>Canary Island</em>.</li>
+      <li><code class="language-plaintext highlighter-rouge">links</code>: Este es un array de referencias, contiene las urls de las redes sociales, eliminamos el de Twitter e Instagram y solo modificamos el de Github, añadiendo el enlace a nuestro perfil.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">footer</code>: Es el objeto que referencia al pie de página. Conrtiene lo mismo que el array <em>links</em> por lo que procedemos a hacer los mismos cambios mencionados anteriormente.</li>
+</ul>
+
+<p>Se modificaron varios parámetros de la sección de <code class="language-plaintext highlighter-rouge">defaults</code>. En este objeto se especifican reglas generales que se aplicarán a cierto grupo de páginas, donde camben destacar los posts o los docs.</p>
+
+<h1 id="desplegando-el-sitio-web-en-github-usando-jeykill">Desplegando el sitio web en Github usando Jeykill</h1>
+
+<p>Para desplegar una página con gh-pages usamos <code class="language-plaintext highlighter-rouge">npx gh-pages -d _site</code>, npx es un ejecutor de paquetes basados en Node.js.</p>
+
+<p>Gh-pages es un paquete que contiene un módulo de despliegue automático que realiza las tareas necesarias para el despliegue de la página web de nuestro repositorio en los servidores de github con gh-pages. Crea automáticamente una rama en nuestro repositorio llamada gh-pages donde situa los archivos necesarios para el despliegue de la página.</p>
+
+<h1 id="creación-de-una-collection-en-jeykill">Creación de una Collection en Jeykill</h1>
+
+<p>En el archivo <code class="language-plaintext highlighter-rouge">_config.yml</code>, se define nuestra collection como demostraremos ahora:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Collections</span>
+<span class="na">collections</span><span class="pi">:</span>
+  <span class="na">docs</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:path/</span>
+  <span class="na">recipes</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:path/</span>
+  <span class="na">pets</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:path/</span>
+  <span class="na">portfolio</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:path/</span>
+  <span class="na">publicaciones</span><span class="pi">:</span>
+    <span class="na">output</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/:collection/:path/</span>
+</code></pre></div></div>
+<p>Como vemos tenemos una collection llamada <em>publicaciones</em>, con <code class="language-plaintext highlighter-rouge">output: true</code> para que jeykill cree una página para cada uno de las collections dentro de la web. Una vez realizado esto crearemos un archivo en <code class="language-plaintext highlighter-rouge">_pages</code> llamado <code class="language-plaintext highlighter-rouge">publicaciones.md</code> donde solo pondremos un mensaje diciendo que se hace uso de las collections y enseñando todas las publicaciones con liquid, donde podemos ver que ya se hace uso de liquid en nuestra web.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Publicaciones</span>    
+<span class="na">layout</span><span class="pi">:</span> <span class="s">collection</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/publicaciones/</span>
+<span class="na">collection</span><span class="pi">:</span> <span class="s">publicaciones</span>
+<span class="na">entries_layout</span><span class="pi">:</span> <span class="s">grid</span>
+<span class="na">classes</span><span class="pi">:</span> <span class="s">wide</span>
+<span class="nn">---</span>
+
+<span class="s">Sample document listing for the collection `_publicaciones`.</span>
+
+<span class="na">Imprime todas las publicaciones que hemos hecho</span><span class="pi">:</span>
+
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Future Date</span>
+
+<span class="pi">-</span> <span class="s">Resumen tema 2 Developing Information Systems</span>
+
+<span class="pi">-</span> <span class="na">Informe práctica</span><span class="pi">:</span> <span class="s">implementación del search</span>
+
+<span class="pi">-</span> <span class="s">Informe práctica</span>
+
+<span class="pi">-</span> <span class="s">Informe práctica</span>
+
+<span class="pi">-</span> <span class="s">Exclude Post from Search Index</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Video</span>
+
+<span class="pi">-</span> <span class="s">Gemified Theme -- Beta Release</span>
+
+<span class="pi">-</span> <span class="s">Gemified Theme -- Alpha Release</span>
+
+<span class="pi">-</span> <span class="s">Welcome to Jekyll!</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">Syntax Highlighting</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">Another Post with Images</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">HTML Tags and Formatting</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">Image Alignment</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">Text Alignment</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">Title with Special&amp;nbsp;---&amp;nbsp;Characters</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">Title *with* **Markdown**</span>
+
+<span class="pi">-</span> <span class="na">Markup</span><span class="pi">:</span> <span class="s">Text Readability Test</span>
+
+<span class="pi">-</span> <span class="s">Wide Single Layout Page</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Sidebar with Navigation List</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Sidebar Custom</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">More Tag</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Image Overlay</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Image Overlay with Custom Tagline</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Overlay with Background Fill</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Image (Vertical)</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Image and Text Readability</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Image (Horizontal)</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Header Image (External URL)</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Author Sidebar Disabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Author Override</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Excerpt (Generated)</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Excerpt (Defined)</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Code Excerpt (Generated)</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Post with Sticky Table of Contents</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Post with Table of Contents</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Post with Nested Table of Contents</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Post with Nested Table of Contents via Helper</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Reading Time, Comments, Social Sharing Links, and Related Posts Disabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Social Sharing Links Enabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Social Sharing Links Disabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Related Posts Enabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Related Posts Disabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Read Time Enabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Read Time Disabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Post Date Enabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Post Date Disabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Comments Enabled</span>
+
+<span class="pi">-</span> <span class="na">Layout</span><span class="pi">:</span> <span class="s">Comments Disabled</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Twitter Embed</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Gallery</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Image (Caption)</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Image (Linked with Caption)</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Teaser Image with OpenGraph Override</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Image (Standard)</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Image (with Link)</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Overlay Image with OpenGraph Override</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Header Image with OpenGraph Override</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Video (YouTube)</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Link</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Quote</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Notice</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Chat</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Standard</span>
+
+<span class="pi">-</span> <span class="na">Post</span><span class="pi">:</span> <span class="s">Modified Date</span>
+
+<span class="pi">-</span> <span class="s">Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive 'been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid</span>
+
+<span class="pi">-</span> <span class="s">Antidisestablishmentarianism</span>
+
+<span class="pi">-</span> <span class="na">Edge Case</span><span class="pi">:</span> <span class="s">Post with multiline excerpt</span>
+
+<span class="pi">-</span> <span class="s">Edge Case No Yaml Title</span>
+
+<span class="pi">-</span> <span class="na">Edge Case</span><span class="pi">:</span> <span class="s">No Body Content</span>
+
+<span class="pi">-</span> <span class="na">Edge Case</span><span class="pi">:</span> <span class="s">Many Categories</span>
+
+<span class="pi">-</span> <span class="na">Edge Case</span><span class="pi">:</span> <span class="s">Many Tags</span>
+
+<span class="pi">-</span> <span class="na">Edge Case</span><span class="pi">:</span> <span class="s">Nested and Mixed Lists</span>
+
+</code></pre></div></div>
+<p>Finalmente, en el archivo navigation.yml creamos en <code class="language-plaintext highlighter-rouge">main</code> un enlace para acceder a la página de publicaciones.md desde la barra superior de nuestra web.</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">main</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Quick-Start</span><span class="nv"> </span><span class="s">Guide"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/docs/quick-start-guide/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">About"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/about/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Sample</span><span class="nv"> </span><span class="s">Posts"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/year-archive/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Sample</span><span class="nv"> </span><span class="s">Collections"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/collection-archive/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Terms</span><span class="nv"> </span><span class="s">&amp;amp;</span><span class="nv"> </span><span class="s">Privacy</span><span class="nv"> </span><span class="s">Policy"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/terms/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Publicaciones"</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/publicaciones/</span>
+</code></pre></div></div>
+<h1 id="404-error-not-found">404 Error Not Found</h1>
+
+<p>Modificamos el fichero <code class="language-plaintext highlighter-rouge">404.md</code> donde detallaremos los parametros que usará Jekyll para la creación de la página 404. Primero escribimos el mensaje que aparecerá en pantalla. Una vez hecho esto vamos a usar un servicio web para mostrar imágenes aleatorias de gatos y también citas famosas con su autor. La llamada a la API se hará de la siguiente forma:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text/javascript</span><span class="dl">"</span><span class="o">&gt;</span>
+
+<span class="cm">/*
+  https://docs.thecatapi.com/ 
+*/</span>
+<span class="kd">const</span> <span class="nx">URL</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">https://api.thecatapi.com/v1/images/search?size=full</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">(</span><span class="k">async</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    
+    <span class="c1">// CAT </span>
+    <span class="kd">let</span> <span class="nx">divTitle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">comment-cat</span><span class="dl">"</span><span class="p">);</span>
+    
+    <span class="kd">let</span> <span class="nx">divcat</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">cat</span><span class="dl">"</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">URL</span><span class="p">,</span> <span class="p">{</span>
+       <span class="na">headers</span><span class="p">:</span> <span class="p">{</span>
+       <span class="dl">'</span><span class="s1">x-api-key</span><span class="dl">'</span><span class="p">:</span> <span class="dl">"</span><span class="s2">56a4f1cc-7f60-468d-9dba-e4b6f04b7c7d</span><span class="dl">"</span>
+       <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="kd">let</span> <span class="nx">cat</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+    <span class="c1">// console.log(cat);   </span>
+    <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">img</span><span class="dl">"</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">title</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">h2</span><span class="dl">"</span><span class="p">);</span>
+    <span class="nx">title</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Consuélate con unos gatos ;)</span><span class="dl">"</span><span class="p">;</span>   
+    <span class="nx">divTitle</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+    <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">url</span><span class="p">;</span>
+    <span class="nx">divcat</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>   
+
+    <span class="c1">// QUOTE</span>
+    <span class="kd">const</span> <span class="nx">quoteDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">quote</span><span class="dl">"</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">authorDiv</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">author</span><span class="dl">"</span><span class="p">);</span>
+    
+    <span class="kd">const</span> <span class="nx">quoteRes</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://api.quotable.io/random</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">quoteRes</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+    <span class="nx">quoteDiv</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`&lt;h2&gt;</span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">content</span><span class="p">}</span><span class="s2">&lt;/h2&gt;`</span><span class="p">;</span>
+    <span class="nx">authorDiv</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s2">`&lt;h3&gt;—</span><span class="p">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">author</span><span class="p">}</span><span class="s2">&lt;/h3&gt;`</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">catch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">})();</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>Si probamos a buscar una página que no existe, ahora nos saldrá esto:</p>
+
+<p><img src="/intro2sd-template/assets/images/pagenotfound.png" alt="error404" /></p>
+
+<h1 id="desplegando-la-web-con-netlify">Desplegando la web con Netlify</h1>
+
+<p>Para realizar el despliegue con Netlify primero creamos una cuenta asociándola con Github. Luego seleccionamos el repositorio que vamos a utilizar y lo hacemos público porque desplegar repositorios privados es solo mediante pago. Una vez hecho esto nos quedaría ajustar ciertos parámetros para poder desplegar en netlify. En el fichero <code class="language-plaintext highlighter-rouge">_config.dev.yml</code> que es el fichero de sobrecarga de objetos, tenemos que poner <code class="language-plaintext highlighter-rouge">baseurl: ""</code>. <br /></p>
+
+<p>Una vez hecho los cambios tenemos que ir a netlify y tendremos que cambiar el comando de despliegue de <code class="language-plaintext highlighter-rouge">npm run build</code> <code class="language-plaintext highlighter-rouge">jekyll build --config _config.yml,_config.dev.yml</code> para que se use la configuración del fichero _config.yml. Si esto no se hace la página se desplegará mal.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/intro2sd-template/categories/#post-formats" class="page__taxonomy-item" rel="tag">Post Formats</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-11-01T00:00:00-04:00">November 1, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Informe+pr%C3%A1ctica%20https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Finforme%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Finforme%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Finforme%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/intro2sd-template/jekyll/post-exclude-search/" class="pagination--pager" title="Exclude Post from Search Index
+">Previous</a>
+    
+    
+      <a href="/intro2sd-template/post%20formats/resumen/" class="pagination--pager" title="Informe práctica
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+              style="display:block; border-bottom: initial;"
+              data-ad-client="ca-pub-7328585512091257"
+              data-ad-slot="3049671934"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+      </div>
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post/post-future-date/" rel="permalink">Post: Future Date
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post lives in the future and is dated Fri Dec 31 00:00:00 9999. When building Jekyll with the --future flag it should appear.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post%20formats/resument2/" rel="permalink">Resumen tema 2 Developing Information Systems
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Las principales etapas del desarollo del sistema
+Las etapas se definen como:
+
+
+  
+    Estudio de factibilidad: El estudio de factibilidad involucra investiga...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post%20formats/informe2/" rel="permalink">Informe práctica: implementación del search
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Guardar cambios de la anterior práctica
+Antes de empezar la práctica de implementación del search, se ha creado una rama con el nombre de intro2sd para allí ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post%20formats/resumen/" rel="permalink">Informe práctica
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+  Introducción al desarrollo de sistemas 
+
+
+
+¿Qué es el desarrollo de sistemas?
+
+Es el proceso de tomar un conjunto de requisitos de negocio y, a través d...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+      <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+             style="display:block; border-bottom: initial;"
+             data-ad-client="ca-pub-7328585512091257"
+             data-ad-slot="3049671934"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/alu0101015293" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/intro2sd-template/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Arturo Pestana. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/intro2sd-template/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'QB6HVGBSBA',
+  apiKey: '9d5014e5bbc77372547bce778dfa5663',
+  indexName: 'minimal_mistakes',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="/intro2sd-template/${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+    <style>
+      .google-auto-placed {
+        margin: 2em auto;
+      }
+    </style>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  </body>
+</html>

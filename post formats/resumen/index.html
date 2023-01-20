@@ -1,0 +1,756 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Informe práctica - Introducción al Desarrollo de Sistemas</title>
+<meta name="description" content="Introducción al desarrollo de sistemas     ¿Qué es el desarrollo de sistemas?  Es el proceso de tomar un conjunto de requisitos de negocio y, a través de una serie de etapas estructuradas, traducirlos en un sistema operativo de TI. Las etapas varían de acuerdo con el enfoque de desarrollo que se utiliza, pero normalmente incluyen:     Un estudio de viabilidad, para ver si el proyecto merece la pena.   Requiere ingeniería para analizar las necesidades empresariales y especificar las necesidades de los usuarios.   Diseño del sistema para satisfacer las necesidades de los usuarios.   Desarrollo del software necesario para cumplir los requisitos.   Pruebas del software.   Implementación de la solución.   Antes, el desarrollo de sistemas se llevaba a cabo de una manera más aleatoria, ad hoc, y el resultado dependía en gran medida de la competencia y la motivación de los desarrolladores individuales. Hoy en día, la importancia central de los sistemas de TI en la mayoría de las organizaciones significa que se han introducido procesos más estructurados y manejables, para reducir el ‘elemento humano’ impredecible y hacer posible la construcción de sistemas más grandes y complejos.  Sistemas de desarrollo y otras disciplinas  El desarrollo de sistemas no se lleva a cabo de forma aislada, sino que forma parte de una red de disciplinas con la que se relaciona:          Gestión del proyecto: para que un proyecto de desarrollo de sistemas tenga éxito, los conocimientos técnicos no son suficientes, también se requiere una gestión eficaz por parte del director del proyecto. Una buena gestión libera al equipo de desarrollo para concentrarse en la parte técnica de diseñar e implementar la solución.           *Análisis de negocios**: se ocupa de investigar la situación del negocio y averiguar cuáles son los problemas que deben resolverse o las oportunidades que deben explotarse. Los analistas de negocios también son importantes para obtener, documentar y gestionar los requisitos para los sistemas y servicios de TI nuevos o mejorados.           Arquitectura de sistemas: es importante desarrollar una arquitectura para que la organización apoye y coordine sus sistemas y proporcione una plataforma coherente para la expansión y el desarrollo.           Programación: es un área especializada que requiere altos niveles de experiencia técnica, sobre todo en cómo aprovechar al máximo las posibilidades que ofrecen el hardware y el software disponibles.           Pruebas: el tester se esfuerza por identificar defectos en cualquier versión para asegurar que el sistema sea satisfactorio. Un punto importante a tener en cuenta es que ninguna prueba, por exhaustiva que sea, puede ofrecer la seguridad de que el software está cien por ciento libre de errores.           Gestión de configuración y control de cambios: está relacionada con el control de cambios, que es un proceso para gestionar los cambios en un sistema o producto de una manera controlada.           Control y seguro de calidad: son los procesos que se emplean dentro de un equipo de proyecto para garantizar que los productos entregados cumplen los criterios de calidad definidos.           Gestión de servicios: se ocupa de la gestión y el mantenimiento de los servicios prestados por los sistemas de TI. Incluye, por ejemplo, actividades como la gestión de instalaciones, el control de la infraestructura de TI de apoyo y la gestión de aplicaciones entre otros.      Deslocalización y externalización del desarrollo de sistemas  Estas dos prácticas se mencionan a menudo juntas pero, de hecho, son distintas y una no implica necesariamente la otra:          La deslocalización implica el uso de recursos de desarrollo en otros países, generalmente porque se pueden obtener recursos de alta calidad por un costo considerablemente menor que en el país de origen de la organización.           La externalización significa ceder el trabajo de desarrollo a empresas y consultorías especializadas en servicios de TI. Un contrato de externalización puede cubrir solo el trabajo de desarrollo o, a menudo, el proveedor asume toda la responsabilidad de los sistemas de TI de la organización. Por supuesto, la externalización y la deslocalización a veces se combinan y también tiene ciertas desventajas:                      Deslocalización: puede haber retrasos y dificultades de comunicación asociados al trabajo con desarrolladores que están muy lejos, cuyo primer idioma no es el mismo que el de la organización del cliente y cuya cultura es muy diferente.                       Externalización: uno de los principales peligros aquí es que la organización del cliente pierde el control directo de los sistemas que son críticos para sus objetivos de negocio. Además, el conocimiento de estos sistemas clave reside ahora en la organización de proveedores en lugar de conservarse internamente.">
+
+
+  <meta name="author" content="Arturo Pestana">
+  
+  <meta property="article:author" content="Arturo Pestana">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Introducción al Desarrollo de Sistemas">
+<meta property="og:title" content="Informe práctica">
+<meta property="og:url" content="https://mmistakes.github.io/intro2sd-template/post%20formats/resumen/">
+
+
+  <meta property="og:description" content="Introducción al desarrollo de sistemas     ¿Qué es el desarrollo de sistemas?  Es el proceso de tomar un conjunto de requisitos de negocio y, a través de una serie de etapas estructuradas, traducirlos en un sistema operativo de TI. Las etapas varían de acuerdo con el enfoque de desarrollo que se utiliza, pero normalmente incluyen:     Un estudio de viabilidad, para ver si el proyecto merece la pena.   Requiere ingeniería para analizar las necesidades empresariales y especificar las necesidades de los usuarios.   Diseño del sistema para satisfacer las necesidades de los usuarios.   Desarrollo del software necesario para cumplir los requisitos.   Pruebas del software.   Implementación de la solución.   Antes, el desarrollo de sistemas se llevaba a cabo de una manera más aleatoria, ad hoc, y el resultado dependía en gran medida de la competencia y la motivación de los desarrolladores individuales. Hoy en día, la importancia central de los sistemas de TI en la mayoría de las organizaciones significa que se han introducido procesos más estructurados y manejables, para reducir el ‘elemento humano’ impredecible y hacer posible la construcción de sistemas más grandes y complejos.  Sistemas de desarrollo y otras disciplinas  El desarrollo de sistemas no se lleva a cabo de forma aislada, sino que forma parte de una red de disciplinas con la que se relaciona:          Gestión del proyecto: para que un proyecto de desarrollo de sistemas tenga éxito, los conocimientos técnicos no son suficientes, también se requiere una gestión eficaz por parte del director del proyecto. Una buena gestión libera al equipo de desarrollo para concentrarse en la parte técnica de diseñar e implementar la solución.           *Análisis de negocios**: se ocupa de investigar la situación del negocio y averiguar cuáles son los problemas que deben resolverse o las oportunidades que deben explotarse. Los analistas de negocios también son importantes para obtener, documentar y gestionar los requisitos para los sistemas y servicios de TI nuevos o mejorados.           Arquitectura de sistemas: es importante desarrollar una arquitectura para que la organización apoye y coordine sus sistemas y proporcione una plataforma coherente para la expansión y el desarrollo.           Programación: es un área especializada que requiere altos niveles de experiencia técnica, sobre todo en cómo aprovechar al máximo las posibilidades que ofrecen el hardware y el software disponibles.           Pruebas: el tester se esfuerza por identificar defectos en cualquier versión para asegurar que el sistema sea satisfactorio. Un punto importante a tener en cuenta es que ninguna prueba, por exhaustiva que sea, puede ofrecer la seguridad de que el software está cien por ciento libre de errores.           Gestión de configuración y control de cambios: está relacionada con el control de cambios, que es un proceso para gestionar los cambios en un sistema o producto de una manera controlada.           Control y seguro de calidad: son los procesos que se emplean dentro de un equipo de proyecto para garantizar que los productos entregados cumplen los criterios de calidad definidos.           Gestión de servicios: se ocupa de la gestión y el mantenimiento de los servicios prestados por los sistemas de TI. Incluye, por ejemplo, actividades como la gestión de instalaciones, el control de la infraestructura de TI de apoyo y la gestión de aplicaciones entre otros.      Deslocalización y externalización del desarrollo de sistemas  Estas dos prácticas se mencionan a menudo juntas pero, de hecho, son distintas y una no implica necesariamente la otra:          La deslocalización implica el uso de recursos de desarrollo en otros países, generalmente porque se pueden obtener recursos de alta calidad por un costo considerablemente menor que en el país de origen de la organización.           La externalización significa ceder el trabajo de desarrollo a empresas y consultorías especializadas en servicios de TI. Un contrato de externalización puede cubrir solo el trabajo de desarrollo o, a menudo, el proveedor asume toda la responsabilidad de los sistemas de TI de la organización. Por supuesto, la externalización y la deslocalización a veces se combinan y también tiene ciertas desventajas:                      Deslocalización: puede haber retrasos y dificultades de comunicación asociados al trabajo con desarrolladores que están muy lejos, cuyo primer idioma no es el mismo que el de la organización del cliente y cuya cultura es muy diferente.                       Externalización: uno de los principales peligros aquí es que la organización del cliente pierde el control directo de los sistemas que son críticos para sus objetivos de negocio. Además, el conocimiento de estos sistemas clave reside ahora en la organización de proveedores en lugar de conservarse internamente.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-11-01T00:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://mmistakes.github.io/intro2sd-template/post%20formats/resumen/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Arturo Pestana",
+      "url": "https://mmistakes.github.io/intro2sd-template/"
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/intro2sd-template/feed.xml" type="application/atom+xml" rel="alternate" title="Introducción al Desarrollo de Sistemas Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/intro2sd-template/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/intro2sd-template/">
+          Introducción al Desarrollo de Sistemas
+          <span class="site-subtitle">A web made by Arturo Pestana</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/intro2sd-template/docs/quick-start-guide/">Quick-Start Guide</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/year-archive/">Sample Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/collection-archive/">Sample Collections</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/terms/">Terms &amp; Privacy Policy</a>
+            </li><li class="masthead__menu-item">
+              <a href="/intro2sd-template/publicaciones/">Publicaciones</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/intro2sd-template/assets/images/arturo.jpeg" alt="Arturo Pestana" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Arturo Pestana</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>A student taking the DMSI subject</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Canary Island</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/alu0101015293" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Informe práctica">
+    <meta itemprop="description" content="  Introducción al desarrollo de sistemas ¿Qué es el desarrollo de sistemas?Es el proceso de tomar un conjunto de requisitos de negocio y, a través de una serie de etapas estructuradas, traducirlos en un sistema operativo de TI. Las etapas varían de acuerdo con el enfoque de desarrollo que se utiliza, pero normalmente incluyen:  Un estudio de viabilidad, para ver si el proyecto merece la pena.  Requiere ingeniería para analizar las necesidades empresariales y especificar las necesidades de los usuarios.  Diseño del sistema para satisfacer las necesidades de los usuarios.  Desarrollo del software necesario para cumplir los requisitos.  Pruebas del software.  Implementación de la solución.Antes, el desarrollo de sistemas se llevaba a cabo de una manera más aleatoria, ad hoc, y el resultado dependía en gran medida de la competencia y la motivación de los desarrolladores individuales. Hoy en día, la importancia central de los sistemas de TI en la mayoría de las organizaciones significa que se han introducido procesos más estructurados y manejables, para reducir el ‘elemento humano’ impredecible y hacer posible la construcción de sistemas más grandes y complejos.Sistemas de desarrollo y otras disciplinasEl desarrollo de sistemas no se lleva a cabo de forma aislada, sino que forma parte de una red de disciplinas con la que se relaciona:      Gestión del proyecto: para que un proyecto de desarrollo de sistemas tenga éxito, los conocimientos técnicos no son suficientes, también se requiere una gestión eficaz por parte del director del proyecto. Una buena gestión libera al equipo de desarrollo para concentrarse en la parte técnica de diseñar e implementar la solución.        *Análisis de negocios**: se ocupa de investigar la situación del negocio y averiguar cuáles son los problemas que deben resolverse o las oportunidades que deben explotarse. Los analistas de negocios también son importantes para obtener, documentar y gestionar los requisitos para los sistemas y servicios de TI nuevos o mejorados.        Arquitectura de sistemas: es importante desarrollar una arquitectura para que la organización apoye y coordine sus sistemas y proporcione una plataforma coherente para la expansión y el desarrollo.        Programación: es un área especializada que requiere altos niveles de experiencia técnica, sobre todo en cómo aprovechar al máximo las posibilidades que ofrecen el hardware y el software disponibles.        Pruebas: el tester se esfuerza por identificar defectos en cualquier versión para asegurar que el sistema sea satisfactorio. Un punto importante a tener en cuenta es que ninguna prueba, por exhaustiva que sea, puede ofrecer la seguridad de que el software está cien por ciento libre de errores.        Gestión de configuración y control de cambios: está relacionada con el control de cambios, que es un proceso para gestionar los cambios en un sistema o producto de una manera controlada.        Control y seguro de calidad: son los procesos que se emplean dentro de un equipo de proyecto para garantizar que los productos entregados cumplen los criterios de calidad definidos.        Gestión de servicios: se ocupa de la gestión y el mantenimiento de los servicios prestados por los sistemas de TI. Incluye, por ejemplo, actividades como la gestión de instalaciones, el control de la infraestructura de TI de apoyo y la gestión de aplicaciones entre otros.  Deslocalización y externalización del desarrollo de sistemasEstas dos prácticas se mencionan a menudo juntas pero, de hecho, son distintas y una no implica necesariamente la otra:      La deslocalización implica el uso de recursos de desarrollo en otros países, generalmente porque se pueden obtener recursos de alta calidad por un costo considerablemente menor que en el país de origen de la organización.        La externalización significa ceder el trabajo de desarrollo a empresas y consultorías especializadas en servicios de TI. Un contrato de externalización puede cubrir solo el trabajo de desarrollo o, a menudo, el proveedor asume toda la responsabilidad de los sistemas de TI de la organización. Por supuesto, la externalización y la deslocalización a veces se combinan y también tiene ciertas desventajas:                  Deslocalización: puede haber retrasos y dificultades de comunicación asociados al trabajo con desarrolladores que están muy lejos, cuyo primer idioma no es el mismo que el de la organización del cliente y cuya cultura es muy diferente.                    Externalización: uno de los principales peligros aquí es que la organización del cliente pierde el control directo de los sistemas que son críticos para sus objetivos de negocio. Además, el conocimiento de estos sistemas clave reside ahora en la organización de proveedores en lugar de conservarse internamente.            ">
+    <meta itemprop="datePublished" content="2022-11-01T00:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Informe práctica
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><br /></p>
+<p align="center">
+
+  <h1 align="center">Introducción al desarrollo de sistemas </h1>
+
+</p>
+
+<h1 id="qué-es-el-desarrollo-de-sistemas">¿Qué es el desarrollo de sistemas?</h1>
+
+<p>Es el proceso de tomar un conjunto de requisitos de negocio y, a través de una serie de etapas estructuradas, traducirlos en un sistema operativo de TI. Las etapas varían de acuerdo con el enfoque de desarrollo que se utiliza, pero normalmente incluyen:</p>
+
+<ul>
+  <li>Un estudio de viabilidad, para ver si el proyecto merece la pena.</li>
+  <li>Requiere ingeniería para analizar las necesidades empresariales y especificar las necesidades de los usuarios.</li>
+  <li>Diseño del sistema para satisfacer las necesidades de los usuarios.</li>
+  <li>Desarrollo del software necesario para cumplir los requisitos.</li>
+  <li>Pruebas del software.</li>
+  <li>Implementación de la solución.</li>
+</ul>
+
+<p>Antes, el desarrollo de sistemas se llevaba a cabo de una manera más aleatoria, ad hoc, y el resultado dependía en gran medida de la competencia y la motivación de los desarrolladores individuales. Hoy en día, la importancia central de los sistemas de TI en la mayoría de las organizaciones significa que se han introducido procesos más estructurados y manejables, para reducir el ‘elemento humano’ impredecible y hacer posible la construcción de sistemas más grandes y complejos.</p>
+
+<h1 id="sistemas-de-desarrollo-y-otras-disciplinas">Sistemas de desarrollo y otras disciplinas</h1>
+
+<p>El desarrollo de sistemas no se lleva a cabo de forma aislada, sino que forma parte de una red de disciplinas con la que se relaciona:</p>
+
+<ul>
+  <li>
+    <p><strong>Gestión del proyecto</strong>: para que un proyecto de desarrollo de sistemas tenga éxito, los conocimientos técnicos no son suficientes, también se requiere una gestión eficaz por parte del director del proyecto. Una buena gestión libera al equipo de desarrollo para concentrarse en la parte técnica de diseñar e implementar la solución.</p>
+  </li>
+  <li>
+    <p>*Análisis de negocios**: se ocupa de investigar la situación del negocio y averiguar cuáles son los problemas que deben resolverse o las oportunidades que deben explotarse. Los analistas de negocios también son importantes para obtener, documentar y gestionar los requisitos para los sistemas y servicios de TI nuevos o mejorados.</p>
+  </li>
+  <li>
+    <p><strong>Arquitectura de sistemas</strong>: es importante desarrollar una arquitectura para que la organización apoye y coordine sus sistemas y proporcione una plataforma coherente para la expansión y el desarrollo.</p>
+  </li>
+  <li>
+    <p><strong>Programación</strong>: es un área especializada que requiere altos niveles de experiencia técnica, sobre todo en cómo aprovechar al máximo las posibilidades que ofrecen el hardware y el software disponibles.</p>
+  </li>
+  <li>
+    <p><strong>Pruebas</strong>: el tester se esfuerza por identificar defectos en cualquier versión para asegurar que el sistema sea satisfactorio. Un punto importante a tener en cuenta es que ninguna prueba, por exhaustiva que sea, puede ofrecer la seguridad de que el software está cien por ciento libre de errores.</p>
+  </li>
+  <li>
+    <p>Gestión de configuración y control de cambios: está relacionada con el control de cambios, que es un proceso para gestionar los cambios en un sistema o producto de una manera controlada.</p>
+  </li>
+  <li>
+    <p><strong>Control y seguro de calidad</strong>: son los procesos que se emplean dentro de un equipo de proyecto para garantizar que los productos entregados cumplen los criterios de calidad definidos.</p>
+  </li>
+  <li>
+    <p><strong>Gestión de servicios</strong>: se ocupa de la gestión y el mantenimiento de los servicios prestados por los sistemas de TI. Incluye, por ejemplo, actividades como la gestión de instalaciones, el control de la infraestructura de TI de apoyo y la gestión de aplicaciones entre otros.</p>
+  </li>
+</ul>
+
+<h1 id="deslocalización-y-externalización-del-desarrollo-de-sistemas">Deslocalización y externalización del desarrollo de sistemas</h1>
+
+<p>Estas dos prácticas se mencionan a menudo juntas pero, de hecho, son distintas y una no implica necesariamente la otra:</p>
+
+<ul>
+  <li>
+    <p>La <strong>deslocalización</strong> implica el uso de recursos de desarrollo en otros países, generalmente porque se pueden obtener recursos de alta calidad por un costo considerablemente menor que en el país de origen de la organización.</p>
+  </li>
+  <li>
+    <p>La <strong>externalización</strong> significa ceder el trabajo de desarrollo a empresas y consultorías especializadas en servicios de TI. Un contrato de externalización puede cubrir solo el trabajo de desarrollo o, a menudo, el proveedor asume toda la responsabilidad de los sistemas de TI de la organización. Por supuesto, la externalización y la deslocalización a veces se combinan y también tiene ciertas desventajas:</p>
+
+    <ul>
+      <li>
+        <p><strong>Deslocalización</strong>: puede haber retrasos y dificultades de comunicación asociados al trabajo con desarrolladores que están muy lejos, cuyo primer idioma no es el mismo que el de la organización del cliente y cuya cultura es muy diferente.</p>
+      </li>
+      <li>
+        <p><strong>Externalización</strong>: uno de los principales peligros aquí es que la organización del cliente pierde el control directo de los sistemas que son críticos para sus objetivos de negocio. Además, el conocimiento de estos sistemas clave reside ahora en la organización de proveedores en lugar de conservarse internamente.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/intro2sd-template/categories/#post-formats" class="page__taxonomy-item" rel="tag">Post Formats</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-11-01T00:00:00-04:00">November 1, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Informe+pr%C3%A1ctica%20https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Fresumen%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Fresumen%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Fresumen%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/intro2sd-template/post%20formats/informe/" class="pagination--pager" title="Informe práctica
+">Previous</a>
+    
+    
+      <a href="/intro2sd-template/post%20formats/informe2/" class="pagination--pager" title="Informe práctica: implementación del search
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+              style="display:block; border-bottom: initial;"
+              data-ad-client="ca-pub-7328585512091257"
+              data-ad-slot="3049671934"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+      </div>
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post/post-future-date/" rel="permalink">Post: Future Date
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post lives in the future and is dated Fri Dec 31 00:00:00 9999. When building Jekyll with the --future flag it should appear.
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post%20formats/resument2/" rel="permalink">Resumen tema 2 Developing Information Systems
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Las principales etapas del desarollo del sistema
+Las etapas se definen como:
+
+
+  
+    Estudio de factibilidad: El estudio de factibilidad involucra investiga...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post%20formats/informe2/" rel="permalink">Informe práctica: implementación del search
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Guardar cambios de la anterior práctica
+Antes de empezar la práctica de implementación del search, se ha creado una rama con el nombre de intro2sd para allí ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/intro2sd-template/post%20formats/informe/" rel="permalink">Informe práctica
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+  Informe práctica Introduction to Systems Development 
+
+
+
+Modificando _config.yml y sus valores de default
+
+Editando el archivo _config.yml cambiamos la ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+      <div align="center" style="margin: 1em 0;">
+        <ins class="adsbygoogle"
+             style="display:block; border-bottom: initial;"
+             data-ad-client="ca-pub-7328585512091257"
+             data-ad-slot="3049671934"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/alu0101015293" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/intro2sd-template/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Arturo Pestana. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/intro2sd-template/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'QB6HVGBSBA',
+  apiKey: '9d5014e5bbc77372547bce778dfa5663',
+  indexName: 'minimal_mistakes',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const title = hit._highlightResult.title.value;
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="/intro2sd-template/${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+    <style>
+      .google-auto-placed {
+        margin: 2em auto;
+      }
+    </style>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  </body>
+</html>
