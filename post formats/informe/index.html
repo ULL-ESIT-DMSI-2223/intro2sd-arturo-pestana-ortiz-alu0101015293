@@ -23,7 +23,7 @@
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Introducción al Desarrollo de Sistemas">
 <meta property="og:title" content="Informe práctica">
-<meta property="og:url" content="https://mmistakes.github.io/intro2sd-template/post%20formats/informe/">
+<meta property="og:url" content="https://mmistakes.github.io/intro2sd-arturo-pestana-ortiz-alu0101015293/post%20formats/informe/">
 
 
   <meta property="og:description" content="Informe práctica Introduction to Systems Development     Modificando _config.yml y sus valores de default  Editando el archivo _config.yml cambiamos la mayoría de los valores de Jeykill. En esta práctica se ha modificado lo siguiente:     minimal_mistakes_skin: Se cambio de default a dark.   locale: Se cambio el parámetro a es-ES.   title: Se cambio el título a Introducción al Desarrollo de Sistemas.   subtitle: Se cambió el subtítulo a A web made by Arturo Pestana.   name: Cambiamos el name a Arturo para que el nombre del autor sea el nuestro, esto lo hacemos debido a que el namepuede ser referenciado en distintos sitios de nuestra web.   description: Es otro objeto al que se le puede referenciar desde otros sitios de la web, lo cambiamos.   baseurl: Se modifica para que tenga la url de la página web.   author: Este objeto se usa para referenciar al autor de la página, por lo tanto se modificaron varios parámetros.            name: Es una referencia al name anteriormente mencionado.       avatar: Lo modificamos y ponemos la ruta de nuestra foto.       bio: Lo modificamos para que tenga una descripción del autor.       location: Lo modificamos por Canary Island.       links: Este es un array de referencias, contiene las urls de las redes sociales, eliminamos el de Twitter e Instagram y solo modificamos el de Github, añadiendo el enlace a nuestro perfil.           footer: Es el objeto que referencia al pie de página. Conrtiene lo mismo que el array links por lo que procedemos a hacer los mismos cambios mencionados anteriormente.   Se modificaron varios parámetros de la sección de defaults. En este objeto se especifican reglas generales que se aplicarán a cierto grupo de páginas, donde camben destacar los posts o los docs.  Desplegando el sitio web en Github usando Jeykill  Para desplegar una página con gh-pages usamos npx gh-pages -d _site, npx es un ejecutor de paquetes basados en Node.js.  Gh-pages es un paquete que contiene un módulo de despliegue automático que realiza las tareas necesarias para el despliegue de la página web de nuestro repositorio en los servidores de github con gh-pages. Crea automáticamente una rama en nuestro repositorio llamada gh-pages donde situa los archivos necesarios para el despliegue de la página.  Creación de una Collection en Jeykill  En el archivo _config.yml, se define nuestra collection como demostraremos ahora:  # Collections collections:   docs:     output: true     permalink: /:collection/:path/   recipes:     output: true     permalink: /:collection/:path/   pets:     output: true     permalink: /:collection/:path/   portfolio:     output: true     permalink: /:collection/:path/   publicaciones:     output: true     permalink: /:collection/:path/  Como vemos tenemos una collection llamada publicaciones, con output: true para que jeykill cree una página para cada uno de las collections dentro de la web. Una vez realizado esto crearemos un archivo en _pages llamado publicaciones.md donde solo pondremos un mensaje diciendo que se hace uso de las collections y enseñando todas las publicaciones con liquid, donde podemos ver que ya se hace uso de liquid en nuestra web. --- title: Publicaciones     layout: collection permalink: /publicaciones/ collection: publicaciones entries_layout: grid classes: wide ---  Sample document listing for the collection `_publicaciones`.  Imprime todas las publicaciones que hemos hecho:   - Post: Future Date  - Resumen tema 2 Developing Information Systems  - Informe práctica: implementación del search  - Informe práctica  - Informe práctica  - Exclude Post from Search Index  - Layout: Header Video  - Gemified Theme -- Beta Release  - Gemified Theme -- Alpha Release  - Welcome to Jekyll!  - Markup: Syntax Highlighting  - Markup: Another Post with Images  - Markup: HTML Tags and Formatting  - Markup: Image Alignment  - Markup: Text Alignment  - Markup: Title with Special&amp;nbsp;---&amp;nbsp;Characters  - Markup: Title *with* **Markdown**  - Markup: Text Readability Test  - Wide Single Layout Page  - Layout: Sidebar with Navigation List  - Layout: Sidebar Custom  - Layout: More Tag  - Layout: Header Image Overlay  - Layout: Header Image Overlay with Custom Tagline  - Layout: Header Overlay with Background Fill  - Layout: Header Image (Vertical)  - Layout: Header Image and Text Readability  - Layout: Header Image (Horizontal)  - Layout: Header Image (External URL)  - Layout: Author Sidebar Disabled  - Layout: Author Override  - Layout: Excerpt (Generated)  - Layout: Excerpt (Defined)  - Layout: Code Excerpt (Generated)  - Layout: Post with Sticky Table of Contents  - Layout: Post with Table of Contents  - Layout: Post with Nested Table of Contents  - Layout: Post with Nested Table of Contents via Helper  - Layout: Reading Time, Comments, Social Sharing Links, and Related Posts Disabled  - Layout: Social Sharing Links Enabled  - Layout: Social Sharing Links Disabled  - Layout: Related Posts Enabled  - Layout: Related Posts Disabled  - Layout: Read Time Enabled  - Layout: Read Time Disabled  - Layout: Post Date Enabled  - Layout: Post Date Disabled  - Layout: Comments Enabled  - Layout: Comments Disabled  - Post: Twitter Embed  - Post: Gallery  - Post: Image (Caption)  - Post: Image (Linked with Caption)  - Post: Teaser Image with OpenGraph Override  - Post: Image (Standard)  - Post: Image (with Link)  - Post: Overlay Image with OpenGraph Override  - Post: Header Image with OpenGraph Override  - Post: Video (YouTube)  - Post: Link  - Post: Quote  - Post: Notice  - Post: Chat  - Post: Standard  - Post: Modified Date  - Suspicio? Bene ... tunc ibimus? Quis uh ... CONEXUS locus his diebus? Quisque semper aliquid videtur, in volutpat mauris. Nolo enim dicere. Vobis neque ab aliis. Ego feci memetipsum explicans. Gus mortuus est. Lorem opus habeo. Jackson Isai? Tu quoque ... A te quidem a ante. Vos scitis quod blinking res Ive &#39;been vocans super vos? Et conteram illud, et conteram hoc. Maledicant druggie excors. Iam hoc tu facere conatus sum ad te in omni tempore? Ludum mutavit. Verbum est ex. Et ... sunt occid  - Antidisestablishmentarianism  - Edge Case: Post with multiline excerpt  - Edge Case No Yaml Title  - Edge Case: No Body Content  - Edge Case: Many Categories  - Edge Case: Many Tags  - Edge Case: Nested and Mixed Lists   Finalmente, en el archivo navigation.yml creamos en main un enlace para acceder a la página de publicaciones.md desde la barra superior de nuestra web. main:   - title: &quot;Quick-Start Guide&quot;     url: /docs/quick-start-guide/   - title: &quot;About&quot;     url: /about/   - title: &quot;Sample Posts&quot;     url: /year-archive/   - title: &quot;Sample Collections&quot;     url: /collection-archive/   - title: &quot;Terms &amp;amp; Privacy Policy&quot;     url: /terms/   - title: &quot;Publicaciones&quot;     url: /publicaciones/  404 Error Not Found  Modificamos el fichero 404.md donde detallaremos los parametros que usará Jekyll para la creación de la página 404. Primero escribimos el mensaje que aparecerá en pantalla. Una vez hecho esto vamos a usar un servicio web para mostrar imágenes aleatorias de gatos y también citas famosas con su autor. La llamada a la API se hará de la siguiente forma: &lt;script type=&quot;text/javascript&quot;&gt;  /*   https://docs.thecatapi.com/  */ const URL = &#39;https://api.thecatapi.com/v1/images/search?size=full&#39;;  (async function() {   try {          // CAT      let divTitle = document.getElementById(&quot;comment-cat&quot;);          let divcat = document.getElementById(&quot;cat&quot;);     let response = await fetch(URL, {        headers: {        &#39;x-api-key&#39;: &quot;56a4f1cc-7f60-468d-9dba-e4b6f04b7c7d&quot;        }     });     let cat = await response.json();     // console.log(cat);        let img = document.createElement(&quot;img&quot;);     let title = document.createElement(&quot;h2&quot;);     title.innerText = &quot;Consuélate con unos gatos ;)&quot;;        divTitle.append(title);     img.src = cat[0].url;     divcat.appendChild(img);         // QUOTE     const quoteDiv = document.getElementById(&quot;quote&quot;);     const authorDiv = document.getElementById(&quot;author&quot;);          const quoteRes = await fetch(&#39;https://api.quotable.io/random&#39;);     const data = await quoteRes.json();     quoteDiv.innerHTML = `&lt;h2&gt;${data.content}&lt;/h2&gt;`;     authorDiv.innerHTML = `&lt;h3&gt;—${data.author}&lt;/h3&gt;`;   }   catch(e) {      console.log(e);   } })(); &lt;/script&gt;   Si probamos a buscar una página que no existe, ahora nos saldrá esto:    Desplegando la web con Netlify  Para realizar el despliegue con Netlify primero creamos una cuenta asociándola con Github. Luego seleccionamos el repositorio que vamos a utilizar y lo hacemos público porque desplegar repositorios privados es solo mediante pago. Una vez hecho esto nos quedaría ajustar ciertos parámetros para poder desplegar en netlify. En el fichero _config.dev.yml que es el fichero de sobrecarga de objetos, tenemos que poner baseurl: &quot;&quot;.   Una vez hecho los cambios tenemos que ir a netlify y tendremos que cambiar el comando de despliegue de npm run build jekyll build --config _config.yml,_config.dev.yml para que se use la configuración del fichero _config.yml. Si esto no se hace la página se desplegará mal.">
@@ -41,7 +41,7 @@
 
 
 
-<link rel="canonical" href="https://mmistakes.github.io/intro2sd-template/post%20formats/informe/">
+<link rel="canonical" href="https://mmistakes.github.io/intro2sd-arturo-pestana-ortiz-alu0101015293/post%20formats/informe/">
 
 
 
@@ -52,7 +52,7 @@
     
       "@type": "Person",
       "name": "Arturo Pestana",
-      "url": "https://mmistakes.github.io/intro2sd-template/"
+      "url": "https://mmistakes.github.io/intro2sd-arturo-pestana-ortiz-alu0101015293/"
     
   }
 </script>
@@ -69,7 +69,7 @@
 
 
 
-  <link href="/intro2sd-template/feed.xml" type="application/atom+xml" rel="alternate" title="Introducción al Desarrollo de Sistemas Feed">
+  <link href="/intro2sd-arturo-pestana-ortiz-alu0101015293/feed.xml" type="application/atom+xml" rel="alternate" title="Introducción al Desarrollo de Sistemas Feed">
 
 
 <!-- https://t.co/dKP3o1e -->
@@ -80,7 +80,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="/intro2sd-template/assets/css/main.css">
+<link rel="stylesheet" href="/intro2sd-arturo-pestana-ortiz-alu0101015293/assets/css/main.css">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
 
@@ -114,22 +114,22 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/intro2sd-template/">
+        <a class="site-title" href="/intro2sd-arturo-pestana-ortiz-alu0101015293/">
           Introducción al Desarrollo de Sistemas
           <span class="site-subtitle">A web made by Arturo Pestana</span>
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/intro2sd-template/docs/quick-start-guide/">Quick-Start Guide</a>
+              <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/docs/quick-start-guide/">Quick-Start Guide</a>
             </li><li class="masthead__menu-item">
-              <a href="/intro2sd-template/about/">About</a>
+              <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/about/">About</a>
             </li><li class="masthead__menu-item">
-              <a href="/intro2sd-template/year-archive/">Sample Posts</a>
+              <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/year-archive/">Sample Posts</a>
             </li><li class="masthead__menu-item">
-              <a href="/intro2sd-template/collection-archive/">Sample Collections</a>
+              <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/collection-archive/">Sample Collections</a>
             </li><li class="masthead__menu-item">
-              <a href="/intro2sd-template/terms/">Terms &amp; Privacy Policy</a>
+              <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/terms/">Terms &amp; Privacy Policy</a>
             </li><li class="masthead__menu-item">
-              <a href="/intro2sd-template/publicaciones/">Publicaciones</a>
+              <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/publicaciones/">Publicaciones</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -164,7 +164,7 @@
   
     <div class="author__avatar">
       
-        <img src="/intro2sd-template/assets/images/arturo.jpeg" alt="Arturo Pestana" itemprop="image">
+        <img src="/intro2sd-arturo-pestana-ortiz-alu0101015293/assets/images/arturo.jpeg" alt="Arturo Pestana" itemprop="image">
       
     </div>
   
@@ -586,7 +586,7 @@
 
 <p>Si probamos a buscar una página que no existe, ahora nos saldrá esto:</p>
 
-<p><img src="/intro2sd-template/assets/images/pagenotfound.png" alt="error404" /></p>
+<p><img src="/intro2sd-arturo-pestana-ortiz-alu0101015293/assets/images/pagenotfound.png" alt="error404" /></p>
 
 <h1 id="desplegando-la-web-con-netlify">Desplegando la web con Netlify</h1>
 
@@ -611,7 +611,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/intro2sd-template/categories/#post-formats" class="page__taxonomy-item" rel="tag">Post Formats</a>
+      <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/categories/#post-formats" class="page__taxonomy-item" rel="tag">Post Formats</a>
     
     </span>
   </p>
@@ -627,22 +627,22 @@
       <section class="page__share">
   
 
-  <a href="https://twitter.com/intent/tweet?text=Informe+pr%C3%A1ctica%20https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Finforme%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Informe+pr%C3%A1ctica%20https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-arturo-pestana-ortiz-alu0101015293%2Fpost%2520formats%2Finforme%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Finforme%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-arturo-pestana-ortiz-alu0101015293%2Fpost%2520formats%2Finforme%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-template%2Fpost%2520formats%2Finforme%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fmmistakes.github.io%2Fintro2sd-arturo-pestana-ortiz-alu0101015293%2Fpost%2520formats%2Finforme%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/intro2sd-template/jekyll/post-exclude-search/" class="pagination--pager" title="Exclude Post from Search Index
+      <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/jekyll/post-exclude-search/" class="pagination--pager" title="Exclude Post from Search Index
 ">Previous</a>
     
     
-      <a href="/intro2sd-template/post%20formats/resumen/" class="pagination--pager" title="Informe práctica
+      <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/post%20formats/resumen/" class="pagination--pager" title="Informe práctica
 ">Next</a>
     
   </nav>
@@ -675,7 +675,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/intro2sd-template/post/post-future-date/" rel="permalink">Post: Future Date
+        <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/post/post-future-date/" rel="permalink">Post: Future Date
 </a>
       
     </h2>
@@ -715,7 +715,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/intro2sd-template/post%20formats/resument2/" rel="permalink">Resumen tema 2 Developing Information Systems
+        <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/post%20formats/resument2/" rel="permalink">Resumen tema 2 Developing Information Systems
 </a>
       
     </h2>
@@ -759,7 +759,7 @@ Las etapas se definen como:
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/intro2sd-template/post%20formats/informe2/" rel="permalink">Informe práctica: implementación del search
+        <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/post%20formats/informe2/" rel="permalink">Informe práctica: implementación del search
 </a>
       
     </h2>
@@ -799,7 +799,7 @@ Antes de empezar la práctica de implementación del search, se ha creado una ra
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/intro2sd-template/post%20formats/resumen/" rel="permalink">Informe práctica
+        <a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/post%20formats/resumen/" rel="permalink">Informe práctica
 </a>
       
     </h2>
@@ -880,7 +880,7 @@ Es el proceso de tomar un conjunto de requisitos de negocio y, a través d...</p
     
 
     
-      <li><a href="/intro2sd-template/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
@@ -891,7 +891,7 @@ Es el proceso de tomar un conjunto de requisitos de negocio y, a través d...</p
     </div>
 
     
-  <script src="/intro2sd-template/assets/js/main.min.js"></script>
+  <script src="/intro2sd-arturo-pestana-ortiz-alu0101015293/assets/js/main.min.js"></script>
 
 
 <!-- Including InstantSearch.js library and styling -->
@@ -921,7 +921,7 @@ const hitTemplate = function(hit) {
   return `
     <div class="list__item">
       <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="/intro2sd-template/${url}">${title}</a></h2>
+        <h2 class="archive__item-title" itemprop="headline"><a href="/intro2sd-arturo-pestana-ortiz-alu0101015293/${url}">${title}</a></h2>
         <div class="archive__item-excerpt" itemprop="description">${content}</div>
       </article>
     </div>
